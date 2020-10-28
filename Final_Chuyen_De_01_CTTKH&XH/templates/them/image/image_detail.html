@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	{{image.MaLinhVuc}}
+{% endblock%}
+
+{%block content %}
+    <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="navbar-bottom" style="width: auto">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Image</h1>
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <p id=""> Tên image: {{ image.Name }}</p>
+                        <p id=""> Mã image: {{ image.MaHinhAnh }}</p>
+                        Mô tả: {{ image.Description }}<br>
+                        <img src="{{ image.Image.url}}" alt="connect" style="max-height:800px; max-width: 900px"><br>
+                    </div>
+                       <div class="card-body">
+                          <a href="{% url 'news:image-edit' image.pk %}"> Update image</a> |
+                          <a href="{% url 'news:image-delete' image.pk %}"> Delete image</a>
+                       </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock%}

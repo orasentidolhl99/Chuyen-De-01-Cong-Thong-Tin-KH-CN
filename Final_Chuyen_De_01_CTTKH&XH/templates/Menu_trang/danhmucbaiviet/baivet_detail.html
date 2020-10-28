@@ -1,0 +1,42 @@
+{% extends "base_home_user.html" %}
+
+{% block contenthome %}
+    <style>
+
+        div#printarea{
+            padding:14px;
+        }
+        .list-trangchu{
+            padding:14px;
+        }
+        .baidadang{
+            padding:14px;
+        }
+    </style>
+    <div id="printarea" style="font-family: 'Roboto Condensed', sans-serif;">
+
+
+        <div class="tieudetin">
+            {{ qs.Name }}
+        </div>
+        <div class="detail">
+            <div class="tieude-description" >
+                {{ qs.Description }}
+            </div>
+            <p style="text-align: justify;line-height: 1.8;">
+                    <span style="font-size: 14px; ;">
+                {{ qs.Detail }}
+                </span>
+                </span>
+                </p>
+        </div>
+    </div>
+    <div class="baidadang">Bài đã đăng:</div>
+    <ul class="list-trangchu">
+        {% for foo in baiviet %}
+          <li>
+             <a style="color: black" href="{% url "news:baiviet-detail" foo.pk %}">{{ foo.Name }}</a>
+          </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

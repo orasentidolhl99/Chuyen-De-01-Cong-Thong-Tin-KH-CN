@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock%}
+
+{% block content %}
+
+    <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <div class="navbar-bottom" style="width: auto">
+                <div class="p-5">
+                  <div class="text-center">
+                    <div class="form-group">
+                      <form class="user" method="post">
+                        <div class="form-group">
+                            {% csrf_token %}
+                            <h1 class="h4 text-gray-900 mb-4">Xóa</h1>
+                            <p>Mã bài Viết: {{ tinbai.MaTinBai }}</p>
+                            <p>Title: {{ tinbai.Title }}</p>
+                            <p>Description: {{ tinbai.Description }}</p>
+                            <p>Ngay Dang: {{ tinbai.NgayDang }}</p>
+                            <img src="{{ tinbai.Images.Image.url}}" alt="connect" style="max-height:800px; max-width: 900px"><br>
+                            <input type="submit" class="btn btn-primary btn-user btn-block"value="Xóa">
+                            <a class="btn btn-primary btn-user btn-block" href="{% url "news:home-tinbai" %}">Trở lại</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+  </div>
+{% endblock %}

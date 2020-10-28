@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	{{tinbai.MaTinBai}}
+{% endblock%}
+
+{%block content %}
+    <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="navbar-bottom" style="width: auto">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Bài viết</h1>
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <p id=""> Mã bài viết: {{ tinbai.MaTinBai }}</p>
+                        <p id=""> Mô tả bài viết: {{ tinbai.Description }}</p>
+                        <img src="{{ tinbai.Images.Image.url}}" alt="connect" style="max-height:800px; max-width: 900px"><br>
+                    </div>
+                       <div class="card-body">
+                          <a href="{% url 'news:tinbai-edit' tinbai.pk %}">Update</a> |
+                          <a href="{% url 'news:tinbai-delete' tinbai.pk %}">Delete</a>
+                       </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock%}

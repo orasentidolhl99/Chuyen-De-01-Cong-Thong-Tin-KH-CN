@@ -1,0 +1,45 @@
+{% extends "base_home_user.html" %}
+{% load  static %}
+{% block contenthome %}
+        <div class="_heaad border-bottom-header">
+            <div class="_title_bar _title_bar-success background-color">
+                <a href="/">Trang chủ</a>
+                <span>»</span>
+                Liên hệ
+            </div>
+        </div>
+        <div class="detail-content">
+            <div style="margin-left:0px; margin-right:0px; text-align:center">
+    <p style="text-align:left"><strong>BAN BIÊN TẬP CỔNG THÔNG TIN ĐIỆN TỬ KHOA HỌC VÀ CÔNG NGHỆ</strong><br>
+    Địa chỉ: Số 26 Huỳnh Văn Nghệ, phường Phú Lợi, thành phố Thủ Dầu Một, tỉnh Bình Dương<br>
+    Điện thoại: &nbsp;(0274)&nbsp;3904668&nbsp;- (0274)&nbsp;3904669 - Fax: (0274) 3856057<br>
+    Email:&nbsp;thongtinkhcn@binhduong.gov.vn</p>
+    </div>
+
+    <div style="margin-left:0px; margin-right:0px; text-align:center">&nbsp;</div>
+
+            <span id="googlemapID" style="display:none">11.057283, 106.682395</span>
+            <span id="googlemapTitle" style="display:none">Sở Khoa học và Công nghệ Bình Dương</span>
+            <div id="map" style="width: 100%; height: 500px; margin-top: 10px; border-top: 1px solid rgb(128, 128, 128); position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="http://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Rất tiếc! Đã xảy ra lỗi.</div><div class="gm-err-message">Trang này đã không tải Google Maps đúng cách. Hãy xem bảng điều khiển JavaScript để biết chi tiết kỹ thuật.</div></div></div></div><div></div><div></div></div>
+        </div>
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyDbRcZuf2RO_9DcthAWABUwtzoBCKmP0UU&amp;sensor=false" type="text/javascript"></script>
+        <script type="text/javascript">
+            function initialize() {
+                if (GBrowserIsCompatible()) {
+                    var map = new GMap2(document.getElementById("map"));
+                    var toado1 = parseFloat($('#googlemapID').text().split(',')[0]);
+                    var toado2 = parseFloat($('#googlemapID').text().split(',')[1]);
+                    map.setCenter(new GLatLng(toado1,toado2), 15); //hai so dau la toa do, con so thu ba la zoom.
+                    var text = $('#googlemapTitle').text();
+                    map.openInfoWindow(map.getCenter(),
+                    document.createTextNode(text, 50, 50));
+                    map.setUIToDefault();
+                    var point = new GLatLng(toado1,toado2);
+                    map.addOverlay(new GMarker(point));
+                }
+            }
+            window.onload = initialize();
+            window.onunload = GUnload();
+        </script>
+                </div>
+{% endblock %}

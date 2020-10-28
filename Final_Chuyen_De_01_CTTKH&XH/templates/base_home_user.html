@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="REFRESH" content="1800">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>
+	Cổng thông tin KH&amp;CN Bình Dương
+    </title>
+    {% include "Menu_trang/inclus/header-user.html" %}
+  </head>
+<body style>
+
+<div class="navContainer">
+    <div class="banner">
+        <img src="{% static "Static_home_user/Media/ResourceAdmin/files/BannerCTTKHCNBD.png" %}">
+    </div>
+    <div class="menu background-menu">
+        <ul>
+            <li class="home active" id="_menu00">
+                <a class="desktop" href="/"><i class="fa fa-home"></i></a>
+                <a class="phone" href="/">Trang chủ</a>
+            </li>
+
+            <li id="_menu2">
+                <a href="/">Thông tin KH&amp;CN</a>
+                <ul>
+                    <li>
+                        <a href="/danhmuc/1">Tin KH&amp;CN Bình Dương</a>
+                    </li>
+
+                    <li>
+                        <a href="/danhmuc/3">Tin KH&amp;CN trong nước</a>
+                    </li>
+
+                    <li>
+                        <a href="/danhmuc/4">Tin KH&amp;CN Thế giới</a>
+                    </li>
+
+                    <li>
+                        <a href="/danhmuc/5">Kết quả nghiên cứu KH&amp;CN trong và ngoài nước</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li id="_menu03">
+                <a href="{% url 'news:lienhe' %}">Liên hệ</a>
+            </li>
+            <li class="_lisearch">
+                <form method="get">
+                    <input class="form-control"  type="text" name="q" id="id_q" placeholder="Search..." value="">
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="nav_bar background-color">
+        <a id="expand" href=""><i class="fa fa-bars" id="menu_expand"></i></a>
+        <a href="" id="close">THÔNG TIN KH&amp;CN BÌNH DƯƠNG</a>
+    </div>
+    <div style="padding: 0 10px;">
+        <marquee onmouseout="this.start();" onmouseover="this.stop();" direction="left" behavior="scroll">
+                        <span style="font-weight:bold;color:#E15454">
+                            ------- CHÀO MỪNG ĐẾN VỚI CỔNG THÔNG TIN KHOA HỌC VÀ CÔNG NGHỆ TỈNH BÌNH DƯƠNG -------
+                        </span>
+                        </marquee>
+    </div>
+
+
+        {% block contenthome %}
+
+        {% endblock %}
+        {% block contentbaiviet %}
+        {% endblock %}
+        {% block contenthomevanban %}
+    {% endblock %}
+
+</div>
+{% include "Menu_trang/inclus/fooder.html" %}
+</body>
+
+</html>

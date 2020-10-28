@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Add New Post
+{% endblock%}
+
+{% block content %}
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <div class="row">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                     <form method="post" enctype="multipart/form-data">
+                         {% csrf_token %}
+                         <label for="id_MaHinhAnh">Mã image</label>
+                        <input type="text"  name="MaHinhAnh"  maxlength="20" class="form-control form-control-user" id="id_MaHinhAnh" placeholder="Mã Phòng Ban"><br>
+                        <label for="id_Name">Tên Phòng Ban:</label>
+                        <input type="text"  name="Name" maxlength="200" required="" id="id_Name" class="form-control form-control-user" placeholder="Tên Phòng Ban">
+                        <label for="id_Image">Image:</label>
+                        <input type="file" name="Image" accept="image/*" id="id_Image"class="form-control form-control-user">
+                        <label for="id_Description">Mô Tả:</label>
+                        <input type="text" name="Description" maxlength="300" required="" id="id_Description" class="form-control form-control-user">
+                        <input type="submit" class="btn btn-primary btn-user btn-block"value="Thêm">
+                     </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+{% endblock %}

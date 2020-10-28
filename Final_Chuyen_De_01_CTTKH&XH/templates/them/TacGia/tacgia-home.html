@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 style="padding: 5px">Tác Giả <a href="{% url "news:tacgia-new" %}"><h2>Thêm</h2></a></h1>
+          </div>
+          <div class="row">
+              {% for foo in tacgia %}
+                  <div class="col-lg-6">
+                      <div class="card mb-4">
+                          <div class="card-header">
+                              Tên tác giả: <a href="{% url "news:tacgia-detail"  foo.pk%}">{{ foo.TenTacGia }}</a>
+                          </div>
+                          <div class="card-body">
+                              Mã tác giả:{{ foo.MaTacGia }} |
+                              Phòng Ban: {{ foo.PhongBan }} |
+                              Số điện thoại: {{ foo.SDT }} |
+                              Email: {{ foo.Email }} |<br>
+                              <a href="{% url 'news:tacgia-edit' foo.pk %}"> Update</a> |
+                              <a href="{% url 'news:tacgia-delete' foo.pk %}"> Delete</a>
+                          </div>
+                      </div>
+                  </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}

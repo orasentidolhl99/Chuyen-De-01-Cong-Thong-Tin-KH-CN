@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 style="padding: 5px">Image <a href="{% url "news:linhvuc-new" %}"><h2>Thêm</h2></a></h1>
+    </div>
+    <div class="row">
+        {% for foo in linhvuc %}
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Tên lĩnh vực: <a href="{% url "news:linhvuc-detail"  foo.pk%}">{{ foo.Name }}</a>
+                    </div>
+                    <div class="card-body">
+                        Mã lĩnh vực: {{ foo.MaLinhVuc }}<br>
+                        <a href="{% url 'news:linhvuc-edit' foo.pk %}"> Update </a> |
+                        <a href="{% url 'news:linhvuc-delete' foo.pk %}"> Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

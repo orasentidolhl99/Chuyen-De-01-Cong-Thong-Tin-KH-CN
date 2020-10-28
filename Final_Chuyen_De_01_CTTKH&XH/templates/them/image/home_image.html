@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 style="padding: 5px">Image <a href="{% url "news:image-new" %}"><h2>Thêm</h2></a></h1>
+
+    </div>
+
+    <div class="row">
+        {% for foo in image %}
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Tên image: <a href="{% url "news:image-detail"  foo.pk%}">{{ foo.Name }}</a>
+                    </div>
+                    <div class="card-body">
+                        Mã image: {{ foo.MaHinhAnh }} | Tên file image: {{ foo.Image }}<br>
+                        <img src="{{ foo.Image.url}}" alt="connect" style="max-height:200px; max-width: 250"><br>
+                        Mô tả: {{ foo.Description }}<br>
+                        <a href="{% url 'news:image-edit' foo.pk %}"> Update image</a> |
+                        <a href="{% url 'news:image-delete' foo.pk %}"> Delete image</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

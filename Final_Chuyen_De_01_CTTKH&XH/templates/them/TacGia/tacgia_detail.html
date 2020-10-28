@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	{{tacgia.MaTacGia}}
+{% endblock%}
+
+{%block content %}
+	
+	<div class="post_details">
+		<div class="post_info">
+			<div class="post_detail_meta">
+			<p>
+                Author: {{tacgia.TenTacGia}} |
+                <a href="{% url 'news:tacgia-edit' tacgia.pk %}"> + Edit Post </a> |
+                <a href="{% url 'news:tacgia-delete' tacgia.pk%}"> Remove Post</a>
+            </p>
+		</div>
+		</div>
+		<p class="post_detail_content">
+		</p>
+	</div>
+
+{% endblock%}

@@ -1,0 +1,51 @@
+body {
+    background-color: #F1F1F1;
+}
+.background-color {
+    background-color: #1D72B5;
+}
+
+.border-color-top {
+    border-top: solid 2px #268FE2;
+}
+
+.border-color-bottom {
+    border-bottom: solid 0px #0754AA;
+}
+
+.border-bottom-header {
+    border-bottom: solid 1px #0754AA;
+}
+
+.background-menu {
+    background: linear-gradient(#268FE2,#1D72B5);
+}
+
+.background-menu-footer {
+    background: linear-gradient(#268FE2,#1D72B5);
+}
+
+.menu > ul > li ul {
+    background-color: #268EE0;
+}
+
+.menu > ul > li:hover, .menu > ul > li.active {
+    background-color: #268EE0;
+}
+.chuyenmuc li, .chuyenmuc-detail li {
+    /*background: linear-gradient(#FDFEFF,#D6EDF9);*/
+    background-color: #D6EDF9;
+    border-bottom: solid 1px #d0cecc;
+    border-top: solid 1px #fff;
+}
+a {
+    color: #393959;
+    text-decoration: none;
+}
+    a:hover {
+        color: #0754AA;
+    }
+
+.list-trangchu > li a:hover {
+    color: #0754AA;
+}

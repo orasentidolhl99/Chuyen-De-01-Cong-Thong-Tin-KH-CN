@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load  static %}
+{% block content %}
+    <div class="container-fluid">
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 style="padding: 5px">Phòng Ban <a href="{% url "news:phongban-new" %}"><h2>Thêm</h2></a></h1>
+          </div>
+          <div class="row">
+              {% for foo in phongban %}
+              <div class="col-lg-6">
+                  <div class="card mb-4">
+                      <div class="card-header">
+                          Tên Phòng Ban: <a href="{% url "news:phongban-detail"  foo.pk%}">{{ foo.TenPhongBan }}</a>
+                      </div>
+                      <div class="card-body">
+                          Mã Phòng Ban: {{foo.MaPhongBan}}
+                          <a href="{% url 'news:phongban-edit' foo.pk %}"> Update Phòng ban</a> |
+                          <a href="{% url 'news:phongban-delete' foo.pk %}"> Delete Phòng ban</a>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+
+

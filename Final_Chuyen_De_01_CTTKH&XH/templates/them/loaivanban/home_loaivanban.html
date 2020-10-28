@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 style="padding: 5px">Loại Văn Bản <a href="{% url "news:loaivanban-new" %}"><h2>Thêm</h2></a></h1>
+        </div>
+     <div class="row">
+           {% for foo in loaivanban %}
+             <div class="col-lg-6">
+                 <div class="card mb-4">
+                     <div class="card-header">
+                            Tên Loại văn bản: <a href="{% url "news:loaivanban-detail"  foo.pk%}">{{ foo.Name }}</a>
+                      </div>
+                       <div class="card-body">
+                          Mã loại văn bản: {{ foo.Maloaivb }}<br>
+                         <a href="{% url 'news:loaivanban-edit' foo.pk %}"> Update </a> |
+                         <a href="{% url 'news:loaivanban-delete' foo.pk %}"> Delete</a>
+                    </div>
+                    </div>
+              </div>
+            {% endfor %}
+      </div>
+    </div>
+{% endblock %}

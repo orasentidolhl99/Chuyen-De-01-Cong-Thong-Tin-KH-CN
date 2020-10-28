@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	{{phongban.MaPhongBan}}
+{% endblock%}
+
+{%block content %}
+	<div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="navbar-bottom" style="width: auto">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Phòng Ban</h1>
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <p id=""> Tên Phòng: {{ phongban.TenPhongBan }}</p>
+                        <p id=""> Mã Phòng: {{ phongban.MaPhongBan }}</p>
+                    </div>
+                       <div class="card-body">
+                          <a href="{% url 'news:phongban-edit' phongban.pk %}"> Update Phòng ban</a> |
+                          <a href="{% url 'news:phongban-delete' phongban.pk %}"> Delete Phòng ban</a>
+                       </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock%}

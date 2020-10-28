@@ -1,0 +1,163 @@
+{% extends 'base_home_user.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Blog posts-->
+    {% if blog_posts %}
+        {% for post in blog_posts %}
+            <div class="blog-post-container">
+                {% if post %}
+                    <div class="container">
+                        <h1>aaaaaaaaaaaaaaaaa</h1>
+                    </div>
+                {% else %}
+                    <div class="container">
+                        <h2 class="card-title">No results</h2>
+                        <p class="card-text">There were no results matching the search: "{{query}}"</p>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="blog-post-container">
+           {% if blog_post %}
+                <div class="container">
+                    <h1>aaaaaaaaaaaaaaaaa</h1>
+                </div>
+            {% else %}
+                <div class="container">
+                    <h2 class="card-title">No results</h2>
+                    <p class="card-text">There were no results matching the search: "{{query}}"</p>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    <!-- End Blog posts-->
+{% endblock content %}
+
+
+{% block contenthomedanhmuc %}
+        {% for foo in baiviet %}
+            <li>
+                <a href="{% url "news:danhmuc-detail" foo.pk %}">{{ foo.TenDanhMuc }}</a>
+            </li>
+        {% endfor %}
+{% endblock %}
+
+{% block contentbaiviet %}
+    <div class="default-page">
+        <div class="catalog1">
+        <div class="box ">
+            <div class="bar1 background-color">
+                <a class="border-color-bottom" href="/danhmuc/1">Tin KH & CN Bình Dương</a>
+            </div>
+        {% for foo in baiviet1 %}
+            <div class="_cs1">
+                <a style="color: red" href="{% url "news:baiviet-detail" foo.pk %}">
+                    {{ foo.Name }}
+                </a>
+                        <a href="">
+                            <img src="{{ foo.Images.Image.url}}" alt="connect">
+                       </a>
+                <div>
+                    {{ foo.Description }}<br>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+        <div class="catalog1">
+        <div class="box ">
+            <div class="bar1 background-color">
+                <a class="border-color-bottom" href="/danhmuc/2">Kết quả nghiên cứu trong và ngoài nước</a>
+            </div>
+                {% for foo in baiviet2 %}
+                    <div class="_cs1">
+                        <a style="color: red" href="{% url "news:baiviet-detail" foo.pk %}">
+                            {{ foo.Name }}
+                        </a>
+                        <a href="">
+                            <img src="{{ foo.Images.Image.url}}" alt="connect">
+                       </a>
+                        <div>
+                            {{ foo.Description }}<br>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="catalog2">
+            <div class="box catalog-height2">
+                <div class="bar1 background-color">
+                    <a class="border-color-bottom" href="/danhmuc/3">Tin KH&amp;CN trong nước</a>
+                </div>
+                <div class="_cs1">
+                    {% for foo in baiviet3 %}
+                        <a style="color: red" href="{% url "news:baiviet-detail" foo.pk %}">
+                            {{ foo.Name }}
+                        </a>
+                        <a href="">
+                            <img src="{{ foo.Images.Image.url}}" alt="connect">
+                       </a>
+                        <div>
+                            {{ foo.Description }}
+                        </div></br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="catalog2" style="margin-left: 10px;">
+        <div class="box catalog-height2">
+            <div class="bar1 background-color">
+                <a class="border-color-bottom" href="/danhmuc/4">Tin KH&amp;CN Thế giới</a>
+            </div>
+            <div class="_cs1">
+                {% for foo in baiviet4 %}
+                     <a style="color: red" href="{% url "news:baiviet-detail" foo.pk %}">
+                        {{ foo.Name }}
+                    </a>
+                </a>
+                        <a href="">
+                            <img src="{{ foo.Images.Image.url}}" alt="connect">
+                       </a>
+                    <div>
+                        {{ foo.Description }}
+                    </div></br>
+                {% endfor %}
+            </div>
+        </div>
+</div>
+    </div>
+{% endblock %}
+
+{% block contenthomevanban %}
+    <div class="nav-top-bar">
+
+    <div class="thanhvien">
+        <div class="bar1 background-color" style="width:100%;margin-left:0;margin-top:0;border-radius:3px 3px 0 0;">
+            <a class="border-color-bottom" style="color: #fff;" href="/van-ban.html"><i class="fa fa-link fa-2x"></i>&nbsp;VĂN BẢN MỚI BAN HÀNH VỀ KH&amp;CN</a>
+        </div>
+        <div class="thanhvien-detail">
+            <div class="clear10"></div>
+            <span id="ContentPlaceHolder1_ctl05_lblDetail"></span><table class="_cs102 _cs102-vb">
+                <tbody><tr>
+                    <th style="width:120px;">Số hiệu</th>
+                    <th>Ngày ban hành</th>
+                    <th style="width:130px;">lĩnh vực</th>
+                    <th>Mô tả</th>
+                    <th>Tải</th>
+                </tr>
+                {% for foo in vanban %}
+                    <tr>
+                        <td>{{ foo.SoHieu }}</td>
+                        <td style="text-align:center">{{ foo.NgayBanHanh }}</td>
+                        <td style="text-align:left;"><a target="_blank" class="" href="">{{ foo.LinhVuc }}</a></td>
+
+                        <td style="text-align:justify;"><a target="_blank" class="" href="">{{ foo.MoTa }}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody></table>
+        </div>
+    </div>
+    </div>
+{% endblock %}

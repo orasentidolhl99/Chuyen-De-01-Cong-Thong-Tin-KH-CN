@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	{{vanban.id}}
+{% endblock%}
+
+{%block content %}
+	
+	<div class="post_details">
+		<div class="post_info">
+			<div class="post_detail_meta">
+			<p>Author: {{vanban.id}} | <a href="{% url 'news:image-edit' vanban.pk %}"> + Edit Post </a> | <a href="{% url 'news:image-delete' vanban.pk%}"> Remove Post</a></p>
+		</div>
+		</div>
+		<p class="post_detail_content">
+		</p>
+	</div>
+
+{% endblock%}

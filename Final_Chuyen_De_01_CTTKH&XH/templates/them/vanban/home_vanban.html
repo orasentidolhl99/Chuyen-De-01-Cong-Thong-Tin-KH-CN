@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 style="padding: 5px">Văn Bản <a href="{% url "news:vanban-new" %}"><h2>Thêm</h2></a></h1>        </div>
+        <div class="row">
+            {% for foo in vanban %}
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Mã bài viết: <a href="{% url "news:vanban-detail"  foo.pk%}">{{ foo.MaTinBai }}</a>
+                            {{ foo.MaVanBan }}
+                            {{ foo.SoHieu }}
+                            {{ foo.NgayBanHanh }}
+                            {{ foo.NgayHieuLuc }}
+                            {{ foo.LoaiVBLoaiVB }}
+                            {{ foo.LinhVuc }}
+                        </div>
+                        <div class="card-body">
+                            <a href="{% url 'news:vanban-edit' foo.pk %}"> Update</a> |
+                            <a href="{% url 'news:vanban-delete' foo.pk %}"> Delete</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

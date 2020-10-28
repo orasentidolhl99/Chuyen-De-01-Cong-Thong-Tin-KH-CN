@@ -1,0 +1,32 @@
+{% extends 'base_home_user.html' %}
+
+{%block contenthome %}
+   <div class="detail-content">
+            <div>
+		<table class="grid-table-item" cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_ctl00_grid" style="border-collapse:collapse;">
+			<tbody>
+            <tr>
+				<th scope="col">sfds</th>
+			</tr>
+            {% for foo in qs.tbltinbai_set.all %}
+                <tr>
+                    <td>
+                        <div class="_cs1 margin-bottom-10">
+                            <a style="display:none;" href="">
+                                <img src=""></a>
+                            <a href="{% url "news:baiviet-detail" foo.pk %}">{{ foo.Name }}</a>
+                            <div>
+                                {{ foo.Description }}<br>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+            </div>
+   </div>
+
+
+{% endblock%}

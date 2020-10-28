@@ -1,0 +1,553 @@
+{% load static %}
+{% extends "base_home_user.html" %}
+<html><head><meta charset="UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="REFRESH" content="1800"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="khcnbinhduong.gov.vn"><title>
+	Cổng thông tin KH&amp;CN Bình Dương
+</title><link href="/css/style.css" rel="stylesheet"><link href="/css/styleResponsive.css" rel="stylesheet"><link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet"><link href="/css/enscroll.css" rel="stylesheet">
+    <script src="/js/jquery-2.0.3.min.js"></script>
+    <script src="/js/enscroll-0.6.1.min.js"></script>
+    <script src="/js/jquery.cycle.all.js"></script>
+    <link href="/pirobox_style/piroboxstyle.css" rel="stylesheet">
+    <script src="/pirobox_style/js/piroBox.1_2_min.js"></script>    
+    
+<link rel="stylesheet" type="text/css" href="/css/color2.css"></head>
+<body >
+    
+    <form method="post" action="./quy-che-van-hanh-cong-thong-tin-khvacn-2.html?id=quy-che-van-hanh-cong-thong-tin-khvacn-2" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=jQpuYECi3iFja03FlHHNwy0P6wE0lVi2dRR4Wy7BA_K94XolgUI8mPUhvf3V6kjJ9RqLL4M5XL__pkMOKGt32SfzInf224u5BfB99UG2Z8o1&amp;t=637347038097037378" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=1hnp0QBybZurlnILroPZn7SLJExTznmOWc9Z1kH1VzwAomWu7DSgEu4mRZtTKgskNDwUyKYWdMt-uizmMU5wc0cgvUxsg3p_CAjQALofe9k2SBuvnQaPKckOm7fIrtqM0R_C11LG8D8JYOrsVJb0ZA2&amp;t=ffffffffdc32f924" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=GQmndUq1_RlAX4KOEji8Db6Imp9Ll8V2KRyPIIvx3hmWryjdsyymZdjNVukVJaS3-wKjYLlf3fS0c-CeY7v-Vd1xrmqTcvanQJhbaRJF1Vc8rAuUKbJulD1AN9rvTU-NwghyHrbPG6IRUilWACrjNQ2&amp;t=ffffffffdc32f924" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CD71489E">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="mJ4JY+bsyJOoYRRIlLDv0tXUsj2X/F5szPq/fkUmg/8GhGutbZKyre5MWUwDt2721+kTtHob9+x3bKwvTIHbOSIyfyts8i0j3GRQN3aWygBGe8AgauypoRi/gDRB680Whz/jLmud5bt7aYtzuRTs42joiBI5ZtGVs0wnjQWkRsvVS9NQ2Cp0PeFtya2CjRH+xk4VxWZqbAeHcLf/6nWcDlD73dyrbuBx/RrCBWHr3eDf8o4UbJGCD4ZvXqkb3/n3GXdY1BMdzKKwriX6jFoVAv0fdxn/cRz/LF47y45Yn3GXheGOsdBUFBA6A5WN07RWRTHJd0rQfXf0E37w7NuY2kHqmVPEXfuGGZdeT6nrdyjW1ZoK84m6qS+W029tbGb3hEUsCYvKVNyof4t5Fnazk9Jdhi6HTxtnseVnhpjBI5g=">
+</div>
+        <div id="headerTop"></div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$ctl19$ctl00$udtThamDoRadio','ctl19_ctl00_udtThamDoRadio'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div class="navContainer">
+            
+            
+<div class="banner">
+    
+    <img src="/Media/ResourceAdmin/files/BannerCTTKHCNBD.png">
+    
+</div>
+
+            
+<div class="menu background-menu">
+    <ul>
+        <li class="timkiem">
+            <input name="ctl00$Menu$txtSearch1" type="text" id="Menu_txtSearch1" class="txtSearch _search_mobi center-align" placeholder="Nhập nội dung tìm kiếm">
+            <a id="Menu_LinkSearch1" class="linkSearch" href="javascript:__doPostBack('ctl00$Menu$LinkSearch1','')"><i class="fa fa-search"></i></a>
+        </li>
+        <li class="home" id="_menu00">
+            <a class="desktop" href="/"><i class="fa fa-home"></i></a>
+            <a class="phone" href="/">Trang chủ</a>
+        </li>
+        <li id="_menu01" class="active">
+            <a href="javascript:void(0);">Giới thiệu</a>
+            <ul>
+                
+                <li>
+                    
+                    <a href="/gioi-thieu/gioi-thieu-cong-thong-tin-khvacn-1.html">Giới thiệu cổng thông tin KH&amp;CN</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/gioi-thieu/quy-che-van-hanh-cong-thong-tin-khvacn-2.html">Quy chế vận hành cổng thông tin KH&amp;CN</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/gioi-thieu/danh-sach-ban-bien-tap-3.html">Danh sách Ban biên tập</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/gioi-thieu/co-cau-to-chuc-ban-bien-tap-5.html">Cơ cấu tổ chức Ban biên tập</a>
+                    
+                </li>
+                
+            </ul>
+        </li>
+        
+       
+        <li id="_menu2">
+            
+            <a href="/danh-muc-tin-tuc/thong-tin-khvacn.html">Thông tin KH&amp;CN</a>
+            
+            <ul>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/tin-khvacn-binh-duong.html">Tin KH&amp;CN Bình Dương</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/ket-qua-nghien-cuu-khvacn-trong-va-ngoai-nuoc.html">Kết quả nghiên cứu KH&amp;CN trong và ngoài nước</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/tin-khvacn-trong-nuoc.html">Tin KH&amp;CN trong nước</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/tin-khvacn-the-gioi.html">Tin KH&amp;CN Thế giới</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/khoa-hoc-thuong-thuc.html">Khoa học thường thức</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/khoa-hoc-san-xuat.html">Khoa học sản xuất</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/thong-tin-cong-nghe.html">Thông tin công nghệ</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/thong-tin-tieu-chuan.html">Thông tin tiêu chuẩn</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/thong-tin-so-huu-tri-tue.html">Thông tin sở hữu trí tuệ</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/he-sinh-thai-khoi-nghiep-doi-moi-sang-tao.html">Hệ sinh thái khởi nghiệp đổi mới sáng tạo</a>
+                    
+                </li>
+                
+                <li>
+                    
+                    <a href="/danh-muc-tin-tuc/thong-tin-khvacn/cuoc-cach-mang-cong-nghiep-40.html">Cuộc cách mạng công nghiệp 4.0</a>
+                    
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+        <li id="_menu02">
+            <a href="javascript:void(0);">Hướng dẫn</a> 
+            <ul>
+                
+                <li><a href="/tthc/lien-he-ban-bien-tap-1.html">Liên hệ  Ban biên tập</a></li>
+                
+                <li><a href="/tthc/lien-he-bo-phan-ky-thuat-2.html">Liên hệ bộ phận kỹ thuật</a></li>
+                
+                <li><a href="/tthc/xem-tra-cuu-thong-tin-khvacn-3.html">Xem tra cứu thông tin KH&amp;CN</a></li>
+                
+                <li><a href="/tthc/dang-ky-san-pham-dich-vu-8.html">Đăng ký sản phẩm, dịch vụ</a></li>
+                
+            </ul>
+        </li>
+        <li id="_menu03">
+            <a href="/lien-he.html">Liên hệ</a>
+        </li>
+        <li class="_lisearch">
+            <input name="ctl00$Menu$txtSearch" type="text" id="Menu_txtSearch" class="txtSearch center-align" placeholder="Nhập nội dung tìm kiếm">
+            <a id="Menu_LinkSearch" class="linkSearch" href="javascript:__doPostBack('ctl00$Menu$LinkSearch','')"><i class="fa fa-search"></i></a>
+        </li>
+    </ul>
+</div>
+<div class="nav_bar background-color">
+    <a id="expand" href="javascript:void(0);"><i class="fa fa-bars" id="menu_expand"></i></a>
+    <a href="javascript:void(0);" id="close">THÔNG TIN KH&amp;CN BÌNH DƯƠNG</a>
+</div>
+<div style="padding: 0 10px;">
+    <marquee onmouseout="this.start();" onmouseover="this.stop();" direction="left" behavior="scroll">
+                    <span style="font-weight:bold;color:#E15454">
+                        ------- CHÀO MỪNG ĐẾN VỚI CỔNG THÔNG TIN KHOA HỌC VÀ CÔNG NGHỆ TỈNH BÌNH DƯƠNG -------
+                    </span>
+                    </marquee>
+</div>
+<div class="nav-top-bar">
+    <i class="fa fa-calendar"></i>&nbsp;<script src="/js/HienNgayHomNay.js"></script>Thứ Tư, 21/10/2020
+    <div class="top">
+        <a href="/sitemap.html"><i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp;Site map</a>
+        <a href="/dong-gop-y-kien.html"><i class="fa fa-wechat" aria-hidden="true"></i>&nbsp;Góp ý BBT</a>
+        <a href="/hoi-dap.html"><i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;Hỏi đáp</a>
+        <a href="/rssChanel.rss">RSS&nbsp;<i style="color: #F7941E;" class="fa fa-rss-square"></i></a>
+        
+    </div>
+</div>
+
+            
+            <div class="clear"></div>
+            <div class="navLeft">
+                
+    <div class="_heaad border-bottom-header">
+        <div class="_title_bar _title_bar-success background-color">
+            <a href="/">Trang chủ</a>
+            <span>»</span>
+            <a href="javascript:void(0);">Giới thiệu</a>
+            <span>»</span>
+            <a href="javascript:void(0)" class="active">Quy chế vận hành cổng thông tin KH&amp;CN</a>
+        </div>
+    </div>
+    <div class="detail-content">        
+        <div class="detail" style="padding:5px 0;">            
+            
+        </div>        
+        <div class="baidadang">Giới thiệu khác:</div>
+        <ul class="list-trangchu">
+            
+                    <li>
+                        <a href="/gioi-thieu/co-cau-to-chuc-ban-bien-tap-5.html">Cơ cấu tổ chức Ban biên tập</a>
+                    </li>
+                
+                    <li>
+                        <a href="/gioi-thieu/danh-sach-ban-bien-tap-3.html">Danh sách Ban biên tập</a>
+                    </li>
+                
+                    <li>
+                        <a href="/gioi-thieu/gioi-thieu-cong-thong-tin-khvacn-1.html">Giới thiệu cổng thông tin KH&amp;CN</a>
+                    </li>
+                
+        </ul>
+    </div>    
+                
+            </div>
+            <div class="navRight">  
+                
+                
+<div class="box-right">
+    <div class="bar background-color">
+        <div class="title_bar border-color-top">
+            <div>CHUYÊN MỤC</div>
+        </div>
+    </div>
+    <div class="chuyenmuc-detail">
+        <ul>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/dua-nghi-quyet-ve-khvacn-vao-cuoc-song.html">Đưa nghị quyết về KH&amp;CN vào cuộc sống</a>
+                
+                <div class="add-expand-detail"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <ul style="display: none;">
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/tin-tuc/tin-tuc.html">Tin tức</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/tim-hieu-nghi-quyet-ve-khvacn/tim-hieu-nghi-quyet-ve-khvacn.html">Tìm hiểu nghị quyết về KH&amp;CN</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/van-ban/van-ban.html">Văn bản</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/thao-luan/thao-luan.html">Thảo luận</a>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/cac-chuong-trinh-khvacn.html">Các chương trình KH&amp;CN</a>
+                
+                <div class="add-expand-detail"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <ul style="display: none;">
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/cac-chuong-trinh-khvacn-trong-diem/cac-chuong-trinh-khvacn-trong-diem.html">Các chương trình KH&amp;CN trọng điểm</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/cac-chuong-trinh-nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe/cac-chuong-trinh-nghien-cuu-khoa-hoc-va-phat-trien-cong-nghe.html">Các chương trình nghiên cứu khoa học và phát triển công nghệ</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/cong-khai-van-ban/cong-khai-van-ban.html">Công khai văn bản</a>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/nhiem-vu-khvacn.html">Nhiệm vụ KH&amp;CN</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/nong-nghiep-nong-thon.html">Nông nghiệp - Nông thôn</a>
+                
+                <div class="add-expand-detail"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <ul>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/ba-con-can-biet/ba-con-can-biet.html">Bà con cần biết</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/khoa-hoc-va-san-xuat/khoa-hoc-va-san-xuat.html">Khoa học và sản xuất</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/mo-hinh-moi-san-pham-moi/mo-hinh-moi-san-pham-moi.html">Mô hình mới - Sản phẩm mới</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/van-hoa-xa-hoi-nong-thon/van-hoa-xa-hoi-nong-thon.html">Văn hóa  - Xã hội nông thôn</a>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/thanh-tuu-khvacn.html">Thành tựu KH&amp;CN</a>
+                
+                <div class="add-expand-detail"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <ul>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/cong-nghe/cong-nghe.html">Công nghệ</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/y-duoc/y-duoc.html">Y - Dược</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/tu-nhien/tu-nhien.html">Tự nhiên</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/moi-truong/moi-truong.html">Môi trường</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/nong-lam-ngu-nghiep/nong-lam-ngu-nghiep.html">Nông - Lâm - Ngư nghiệp</a>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/danh-muc-tin-tuc/xa-hoi-nhan-van/xa-hoi-nhan-van.html">Xã hội nhân văn</a>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/thu-vien-so.html">Thư viện số</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/danh-muc-tin-tuc/thong-ke-khvacn.html">Thống kê KH&amp;CN</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="http://ttkhcn.khcnbinhduong.gov.vn/van-ban.html">Văn bản pháp luật</a>
+                
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.chuyenmuc-detail > ul > li').hover(function () {
+        $('ul', this).show();
+    }, function () {
+        $('ul', this).hide();
+    });
+</script>
+
+
+
+<div class="clear5"></div>
+<div class="menu-footer background-menu-footer">
+    <a href="/"><i class="fa fa-home"></i>&nbsp;Trang chủ</a>
+    <a href="/sitemap.html"><i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp;Site map</a>
+    <a href="/lien-he.html"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Liên hệ</a>    
+    <a href="/dong-gop-y-kien.html"><i class="fa fa-wechat" aria-hidden="true"></i>&nbsp;Góp ý</a>
+    <a href="/hoi-dap.html"><i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;Hỏi đáp</a>
+</div>
+<div class="footer background-color">
+    <div class="detail">
+        <div class="detail-left">
+            <p><span style="font-size:14px"><span style="color:#ffffff"><strong>SỞ KHOA HỌC VÀ CÔNG NGHỆ TỈNH BÌNH DƯƠNG</strong><br>
+Địa chỉ: Tầng 11-Tháp A, Trung tâm Hành chính tỉnh Bình Dương, phường Hòa Phú, thành phố Thủ Dầu Một, tỉnh Bình Dương<br>
+Điện thoại Văn phòng Sở: &nbsp;(0274)&nbsp;3822924 &nbsp;- Fax: (0274) 3824421<br>
+Email:&nbsp;</span><a href="mailto:binhduongcisti@gmail.com"><span style="color:#ffffff">sokhcn@binhduong.gov.vn</span></a><br>
+<span style="color:#ffffff">Chịu trách nhiệm:&nbsp;Ông&nbsp;Nguyễn Bình Phước, Phó Giám&nbsp;đốc Sở Khoa học và Công nghệ</span></span><br>
+&nbsp;</p>
+
+<p><span style="color:#ffffff"><span style="font-size:14px"><strong>QUẢN LÝ WEBSITE:&nbsp;TRUNG TÂM THÔNG TIN VÀ THỐNG KÊ KHOA HỌC VÀ CÔNG NGHỆ TỈNH BÌNH DƯƠNG</strong><br>
+Địa chỉ: Số 26 Huỳnh Văn Nghệ, phường Phú Lợi, thành phố Thủ Dầu Một, tỉnh Bình Dương<br>
+Điện thoại: &nbsp;(0274)&nbsp;3904667 - (0274)&nbsp;3904669 - Fax: (0274) 3856057<br>
+Email:&nbsp;thongtinkhcn@binhduong.gov.vn</span></span></p>
+
+        </div>        
+    </div>    
+</div>
+
+        
+        <div class="Loi">
+            <span id="LinkGoToTopPage" style="cursor: pointer;">
+                &nbsp;
+            </span>
+        </div>
+        <script src="/js/jq_session.js"></script>
+        <script src="/js/jsAllProcess.js"></script>
+        <script type="text/javascript">
+            //goto top
+            function ShowGoToTop() {
+                $Loi = $('.Loi');
+                var topsroll = $(document).scrollTop();
+                if (topsroll > 0) {
+                    $Loi.fadeIn(300);
+                }
+                else {
+                    $Loi.fadeOut(300);
+                }                
+            }
+            $window = $(window);
+            $window.scroll(function () {
+                ShowGoToTop();
+            });
+            $.fn.scrollView = function () {
+                return this.each(function () {
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top
+                    }, 500);
+                });
+            }
+            $('.Loi').click(function (event) {
+                event.preventDefault();
+                $('#headerTop').scrollView();
+            });   
+            //invalid input
+            $(document).ready(function () {
+                var _arr_valid = [];
+                $(document).ready(function () {
+                    $('input[type=text],textarea').each(function () {
+                        _arr_valid.push($(this).attr('id'));
+                    });
+                    _CheckInputValid(_arr_valid);
+                });
+            });
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+_CLoseThamDo();Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl19_ctl00_udtThamDoRadio","displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl19_ctl00_ctl00"));
+});
+//]]>
+</script>
+</form><div class="piro_overlay" style="display: none; opacity: 0.5; height: 663px; visibility: visible;"></div><table class="pirobox_content" cellpadding="0" cellspacing="0" style="display: none;"><tbody><tr><td colspan="3" class="pirobox_up"><div class="piro_close"></div></td></tr><tr><td class="t_l"></td><td class="t_c"></td><td class="t_r"></td></tr><tr><td class="c_l"></td><td class="c_c"><span><span></span></span><div></div><a href="#play" class="play" style="display: none;"></a></td><td class="c_r"></td></tr><tr><td class="b_l"></td><td class="b_c"></td><td class="b_r"></td></tr><tr><td colspan="3" class="pirobox_down"><div class="piro_nav"><div class="caption" style="opacity: 0.8; border-radius: 4px;"></div><a href="#prev" class="piro_prev"></a><a href="#next" class="piro_next"></a></div></td></tr></tbody></table>
+
+
+</body></html>
