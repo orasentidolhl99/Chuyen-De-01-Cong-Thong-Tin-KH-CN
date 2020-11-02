@@ -13,47 +13,42 @@
                 <div class="p-5">
                     <div class="text-center">
                     <div class="form-group">
-                        <form method="post" enctype="multipart/form-data">
-                            {% csrf_token%}
-                            <h1 class="h4 text-gray-900 mb-4">Cập nhật</h1>
+                        <div class="form-group">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token%}
+                                <h1 class="h4 text-gray-900 mb-4">Cập nhật</h1>
 
-                            <p>
-                                <label for="id_MaTinBai">Ma Tin Bai:</label>
-                                <input class="form-control form-control-user" type="text" name="MaTinBai" value="ưqeqw" maxlength="30" required="" id="id_MaTinBai">
-                            </p>
-                            <p>
-                                <label for="id_Title">Title:</label>
-                                <input class="form-control form-control-user" type="text" name="Title" value="qưeqwe" maxlength="200" required="" id="id_Title">
-                            </p>
-                            <p>
-                                <label for="id_Images">Images:</label>
-                                <select name="Images" required="" id="id_Images">
-                                    <option value="">---------</option>
-                                    {% for foo in tinbai.Images %}
-                                        {{ foo.Name }}
-                                        <option value="{{ foo.Name }}">{{ foo.Name }}</option>
+                                <p>
+                                    <label for="id_MaTinBai">Mã tin bài:</label>
+                                    <input class="form-control form-control-user" type="text" name="MaTinBai" value="{{ tinbai.MaTinBai }}" maxlength="30" required="" id="id_MaTinBai">
+                                </p>
+                                <p>
+                                    <label for="id_Title">Tiêu đề:</label>
+                                    <input class="form-control form-control-user" type="text" name="Title" value="{{ tinbai.Title }}" maxlength="200" required="" id="id_Title">
+                                </p>
+                                <p>
+                                    <label for="id_Description">Mô tả ngắn:</label>
+                                    <input class="form-control form-control-user" type="text" name="Description" value="{{ tinbai.Description}}" maxlength="500" required="" id="id_Description">
+                                </p>
+                                <p>
+                                    <label for="id_Detail">Nội dung:</label>
+                                    <input class="form-control form-control-user" type="text" name="Detail" value="{{ tinbai.Detail}}" maxlength="500" required="" id="id_Detail">
+                                </p>
+                                <p>
+                                    <label for="id_Images">Hình ảnh</label><br> {{form.Images}}
+                                </p>
 
-                                    {% endfor %}
+                                <p>
+                                    <label for="id_NgayDang">Ngày đăng</label>
+                                    <input class="form-control" type="text" name="NgayDang" value="2020-10-28" required="" id="id_NgayDang">
+                                </p>
 
-                                </select>
-                            </p>
-                            <p>
-                                <label for="id_Description">Description:</label>
-                                <input class="form-control form-control-user" type="text" name="Description" value="qưeqwe" maxlength="500" required="" id="id_Description">
-                            </p>
-                            <p>
-                                <label for="id_Detail">Detail:</label>
-                                <input class="form-control form-control-user" type="text" name="Detail" value="qưeq" maxlength="500" required="" id="id_Detail">
-                            </p>
-                            <p>
+                                <!-- <p>
                                 <label for="id_TrangThai">TrangThai:</label>
-                                <input class="form-control form-control-user" type="checkbox" name="TrangThai" id="id_TrangThai" checked=""></p>
-                            <p>
-                                <label for="id_NgayDang">NgayDang:</label>
-                                <input class="form-control form-control-user" type="text" name="NgayDang" value="2020-12-12" required="" id="id_NgayDang">
-                            </p>
-                            <div><button>Update</button></div>
-                        </form>
+                                <input class="form-control form-control-user" type="checkbox" name="{{ tinbai.TrangThai }}" id="id_TrangThai" checked=""></p> -->
+
+                                <div><button>Update</button></div>
+                            </form>
                     </div>
                     </div>
                 </div>

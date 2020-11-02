@@ -17,7 +17,10 @@ app_name = 'news'
 urlpatterns = [
 
     path('lienhe/', ThongTin_Nguoidung_views.lienhe, name='lienhe'),
-    path('gioithieu/', ThongTin_Nguoidung_views.gioithieu, name='gioithieu'),
+    path('gioithieu1/', ThongTin_Nguoidung_views.gioithieu1, name='gioithieu1'),
+    path('gioithieu2/', ThongTin_Nguoidung_views.gioithieu2, name='gioithieu2'),
+    path('gioithieu3/', ThongTin_Nguoidung_views.gioithieu3, name='gioithieu3'),
+    path('gioithieu4/', ThongTin_Nguoidung_views.gioithieu4, name='gioithieu4'),
     path('ykien/', ThongTin_Nguoidung_views.ykien, name='ykien'),
     path('', ThongTin_Nguoidung_views.viewlist, name='danhmuc'),
     path('danhmuc/<int:pk>', ThongTin_Nguoidung_views.detailviews, name="danhmuc-detail"),
